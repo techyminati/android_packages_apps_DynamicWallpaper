@@ -169,12 +169,14 @@ public class MainActivity extends AppCompatActivity {
         button.clearAnimation();
     }
 
-    private void refreshWallpaper() {
-        randomValues = getRandomValues();
-        gradient = createGradient(randomValues);
-        bitmap = createDynamicGradient(gradient);
+private void refreshWallpaper() {
+    randomValues = getRandomValues();
+    gradient = createGradient(randomValues);
+    bitmap = createDynamicGradient(gradient);
+    if (bitmap != null) {
         imageView.setImageBitmap(bitmap);
     }
+}
 
     private void refreshColor() {
         fixTopColor = getRandomColor();
