@@ -223,13 +223,13 @@ public class MainActivity extends AppCompatActivity {
                     manager.setBitmap(bitmap, null, true, WallpaperManager.FLAG_LOCK);//For Lock screen
                 }
             } else {
-                manager.setBitmap(bitmap);
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+            manager.setBitmap(bitmap);
         }
+        Toast.makeText(getApplicationContext(), "Wallpaper set successfully", Toast.LENGTH_SHORT).show();
+    } catch (IOException e) {
+        e.printStackTrace();
+        Toast.makeText(getApplicationContext(), "Failed to set wallpaper", Toast.LENGTH_SHORT).show();
+    }
     }
 
     /*
